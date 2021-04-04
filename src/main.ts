@@ -10,6 +10,8 @@ import "firebase/analytics";
 import "firebase/auth";
 import "firebase/firestore";
 
+import { App } from "./app";
+
 const root = document.querySelector('#root');
 const signButton = document.querySelector('#click');
 
@@ -42,4 +44,4 @@ if (signButton) {
   signButton.addEventListener('click', login)
 }
 
-
+const app = new App();
