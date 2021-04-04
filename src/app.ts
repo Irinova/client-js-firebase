@@ -1,4 +1,5 @@
 import {AppConfig} from './appConfig'
+import {Home} from "./view/home/Home";
 
 export class App {
     private _isDebug: boolean = false;
@@ -13,6 +14,10 @@ export class App {
     }
 
     run(): void {
-
+        if (this._config.root) {
+            this._config.root.append(Home())
+        }
     }
 }
+
+

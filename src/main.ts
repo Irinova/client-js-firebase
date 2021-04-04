@@ -44,4 +44,8 @@ if (signButton) {
   signButton.addEventListener('click', login)
 }
 
-const app = new App();
+export const app = new App();
+app.setConfig({
+  root
+})
+app.run();

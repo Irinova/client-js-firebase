@@ -1,1 +1,3 @@
-export class AppConfig {}
+export class AppConfig {
+    root: Element|null = null;
+}
