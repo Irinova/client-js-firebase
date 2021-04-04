@@ -11,14 +11,12 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const root = document.querySelector('#root');
+const signButton = document.querySelector('#click');
 
-if (root) {
-    root.textContent = 'HELLO WORLD!'
-}
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyAoir4n-kR7Bcw1jmUs2dclGP_k86kw-dQ",
     authDomain: "client-js-firebase.firebaseapp.com",
     projectId: "client-js-firebase",
@@ -30,3 +28,18 @@ if (root) {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+const auth = firebase.auth()
+const firestore = firebase.firestore()
+
+const login = async () => {
+  const provider = new firebase.auth.GoogleAuthProvider()
+  const { user } = await auth.signInWithPopup(provider)
+  console.log('Provider', provider)
+  console.log('user', user)
+}
+if (signButton) {
+  signButton.addEventListener('click', login)
+}
+
+
