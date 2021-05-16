@@ -1,7 +1,7 @@
 import {AppConfig} from './appConfig'
 
 export class App {
-    private _isDebug: boolean = false;
+    private _isDebug = false;
     private _config: AppConfig = new AppConfig();
 
     getConfig(): AppConfig {
@@ -13,6 +13,7 @@ export class App {
     }
 
     run(): void {
+        console.log(1)
 
     }
 }
