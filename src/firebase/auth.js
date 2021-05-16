@@ -10,15 +10,13 @@ import "firebase/analytics";
 import "firebase/auth";
 import "firebase/firestore";
 
-import { App } from "./app";
-
 const root = document.querySelector('#root');
 const signButton = document.querySelector('#click');
 
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
     apiKey: "AIzaSyAoir4n-kR7Bcw1jmUs2dclGP_k86kw-dQ",
     authDomain: "client-js-firebase.firebaseapp.com",
     projectId: "client-js-firebase",
@@ -26,22 +24,20 @@ const signButton = document.querySelector('#click');
     messagingSenderId: "268868901296",
     appId: "1:268868901296:web:1f405a907bb9fb2bf31e75",
     measurementId: "G-4WSXE40HG6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 const auth = firebase.auth()
 const firestore = firebase.firestore()
 
 const login = async () => {
-  const provider = new firebase.auth.GoogleAuthProvider()
-  const { user } = await auth.signInWithPopup(provider)
-  console.log('Provider', provider)
-  console.log('user', user)
+    const provider = new firebase.auth.GoogleAuthProvider()
+    const { user } = await auth.signInWithPopup(provider)
+    console.log('Provider', provider)
+    console.log('user', user)
 }
 if (signButton) {
-  signButton.addEventListener('click', login)
+    signButton.addEventListener('click', login)
 }
-
-const app = new App();

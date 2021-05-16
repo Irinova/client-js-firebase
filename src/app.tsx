@@ -1,7 +1,7 @@
 import {AppConfig} from './appConfig'
+import React from 'react';
+import ReactDOM from 'react-dom'
 import { Routes } from "./Routes";
-import { h, render } from 'preact';
-/** @jsx h */
 
 export class App {
     private _isDebug = false;
@@ -16,7 +16,9 @@ export class App {
     }
 
     run(): void {
-        console.log(1)
-        render(Routes, document.body);
+        ReactDOM.render(
+            <Routes/>,
+            document.getElementById('root')
+        );
     }
 }

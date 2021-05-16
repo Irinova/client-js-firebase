@@ -1,11 +1,10 @@
-import preact from 'preact';
-import { render, Component } from 'preact';
+import React, {ReactElement} from "react";
 
-export class Home extends Component {
+export class Home extends React.Component<any, any> {
 
-    render() {
+    render(): ReactElement {
         return (
-            <div> Hello! </div>
+            <div> Hello Home! </div>
         );
     }
 
