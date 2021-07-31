@@ -14,17 +14,17 @@ export class Routes extends React.Component<any, any>{
             <Router>
                 <div>
                     <nav>
-                        <ul>
-                            <li>
+                        <div className="menu">
+                            <div className="menu__item">
                                 <Link to="/">Home</Link>
-                            </li>
-                            <li>
+                            </div>
+                            <div className="menu__item">
                                 <Link to="/about">About</Link>
-                            </li>
-                            <li>
+                            </div>
+                            <div className="menu__item">
                                 <Link to="/users">Users</Link>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </nav>
 
                     {/* A <Switch> looks through its children <Route>s and
