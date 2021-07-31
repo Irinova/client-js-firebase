@@ -1,0 +1,1 @@
+{"version":3,"file":"styles.css","mappings":"AAEA;EACE,UAHW;AAEb","sources":["webpack://js-firebase/./src/test.scss"],"sourcesContent":["$body-color: red;\n\nbody {\n  color: $body-color;\n}\n"],"names":[],"sourceRoot":""}
