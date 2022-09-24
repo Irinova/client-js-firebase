@@ -16,7 +16,7 @@ export class App {
     }
 
     run(): void {
-        console.log(2)
+        console.log(3)
         ReactDOM.render(
             <Routes/>,
             document.getElementById('root')
